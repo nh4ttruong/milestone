@@ -32,7 +32,6 @@
 	<build>
 		<plugins>
             <plugin>
-<<<<<<< HEAD
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
                 <version>6.5.0</version>
@@ -54,8 +53,6 @@
                 </configuration>
             </plugin>
             <plugin>
-=======
->>>>>>> 94f7886b352741588450c2b49f45ba81a281c662
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.6</version>
