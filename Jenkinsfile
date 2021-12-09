@@ -14,7 +14,16 @@ pipeline {
         }
       }
     }
-
+    
+    stage('Junit Test'){
+      steps{
+         echo "Test Code"
+           dir("OAuth2.0"){
+             bat 'mvn test'
+       }
+     }
+   }
+    
     stage ('OWASP Dependency-Check Vulnerabilities') {
       steps {
         withMaven(maven : 'mvn-3.6.3') {
