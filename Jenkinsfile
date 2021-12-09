@@ -19,7 +19,7 @@ pipeline {
       steps{
          echo "Test Code"
            dir("OAuth2.0"){
-             bat 'mvn test'
+             sh 'mvn test'
        }
      }
    }
@@ -43,5 +43,6 @@ pipeline {
         }
       }
     }
+    
   }
 }
