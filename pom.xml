@@ -92,7 +92,7 @@
                 <configuration>
                     <appName>sprint-boot-milestone</appName>
                     <processTypes>
-                        <web>java $JAVA_OPTS -cp target/classes:target/dependency/* com.example.spring-boot</web>
+                        <web>java $JAVA_OPTS -cp target/classes:target/dependency/* com.example.springboot.Application</web>
                     </processTypes>
                 </configuration>
             </plugin>
