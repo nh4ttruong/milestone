@@ -6,6 +6,10 @@ pipeline {
     maven 'mvn-3.6.3'
   }
 
+  environment {
+    HEROKU_API_KEY = credentials('sprint-boot-milestone')
+  }
+
   stages {
     stage('Build') {
       steps {
@@ -14,15 +18,6 @@ pipeline {
         }
       }
     }
-    
-    stage('Junit Test'){
-      steps{
-         echo "Test Code"
-           dir("OAuth2.0"){
-             sh 'mvn test'
-       }
-     }
-   }
     
     stage ('OWASP Dependency-Check Vulnerabilities') {
       steps {
@@ -40,6 +35,14 @@ pipeline {
           withMaven(maven : 'mvn-3.6.3') {
             sh 'mvn sonar:sonar -Dsonar.dependencyCheck.jsonReportPath=target/dependency-check-report.json -Dsonar.dependencyCheck.xmlReportPath=target/dependency-check-report.xml -Dsonar.dependencyCheck.htmlReportPath=target/dependency-check-report.html'
           }
+        }
+      }
+    }
+
+    stage('Heroky Deploy') {
+      steps {
+        withMaven(maven: 'mvn-3.6.3') {
+          sh 'mvn clean heroku:deploy'
         }
       }
     }
