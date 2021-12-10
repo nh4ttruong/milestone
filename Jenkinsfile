@@ -41,13 +41,13 @@ pipeline {
     
     stage("Quality Gate") {
             steps {
-              timeout(time: 1, unit: 'HOURS') {
+              timeout(time: 10, unit: 'MINUTES') {
                 waitForQualityGate abortPipeline: true
           }
        }
     }
 
-    stage('Heroky Deploy') {
+    stage('Heroku Deploy') {
       steps {
         withMaven(maven: 'mvn-3.6.3') {
           sh 'mvn clean heroku:deploy'
