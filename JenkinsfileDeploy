@@ -7,7 +7,7 @@ pipeline {
   }
 
   environment {
-    HEROKU_API_KEY = credentials('sprint-boot-milestone')
+    HEROKU_API_KEY = credentials('demo-learnathon')
   }
 
   stages {
