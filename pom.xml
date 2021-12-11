@@ -102,7 +102,7 @@
                     <jdkVersion>11</jdkVersion>
                     <appName>demo-learnathon</appName>
                     <processTypes>
-                        <web>java $JAVA_OPTS -cp target/classes:target/dependency/* com.example.springboot.XSSParameterDemo</web>
+                        <web>java $JAVA_OPTS -cp target/classes:target/dependency/* com.example.learnathon.XSSParameterDemo</web>
                     </processTypes>
                 </configuration>
             </plugin>
