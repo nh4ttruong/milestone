@@ -6,10 +6,6 @@ pipeline {
     maven 'mvn-3.6.3'
   }
 
-  environment {
-    HEROKU_API_KEY = credentials('sprint-boot-milestone')
-  }
-
   stages {
     stage('Build') {
       steps {
@@ -37,23 +33,6 @@ pipeline {
           }
         }
       }
-    }
-    
-    stage("Quality Gate") {
-            steps {
-              timeout(time: 10, unit: 'MINUTES') {
-                waitForQualityGate abortPipeline: true
-          }
-       }
-    }
-
-    stage('Heroku Deploy') {
-      steps {
-        withMaven(maven: 'mvn-3.6.3') {
-          sh 'mvn clean heroku:deploy'
-        }
-      }
-    }
-    
+    }    
   }
 }
