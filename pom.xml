@@ -91,7 +91,7 @@
                 <version>3.0.4</version>
                 <configuration>
                     <jdkVersion>11</jdkVersion>
-                    <appName>sprint-boot-milestone</appName>
+                    <appName>demo-learnathon</appName>
                     <processTypes>
                         <web>java $JAVA_OPTS -cp target/classes:target/dependency/* com.example.springboot.Application</web>
                     </processTypes>
