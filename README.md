@@ -1,13 +1,7 @@
 # Milestone - Learnathon Java Web App Demo Project
 Learnathon is project which used to demo SDLC/DevSecOps cycle
 
-![Demo video for Learnathon project](https://www.youtube.com/watch?v=W9Mrn4KiaBE)
-
-## Threat Modeling
-
-![DevSecOps Cycle](images/threatmodeling.png)
-
-![Infomation Table](images/info.png)
+[You can view demo here!](https://youtu.be/W9Mrn4KiaBE)
 
 ## About DevSecOps cycle
 I use Jenkins for through out the process and all job is handled on it.
@@ -33,3 +27,9 @@ In this stage, I will use 2 type of scanning - SAST & DAST scan for this project
 ### Release & Deploy Stage
 - Jenkins Tool
 - Heroku Cloud: for web app deploy and monitoring
+
+## Threat Modeling
+
+![DevSecOps Cycle](images/threatmodeling.png)
+
+![Infomation Table](images/info.png)
