@@ -1,7 +1,7 @@
 # Milestone - Learnathon Java Web App Demo Project
 Learnathon is project which used to demo SDLC/DevSecOps cycle
 
-[You can view demo here!](https://youtu.be/W9Mrn4KiaBE)
+[You can view demo here!](https://youtu.be/W9Mrn4KiaBE). You can visit [http:/demo-learnathon.herokuapp.com/](http://demo-learnathon.herokuapp.com) to find out the XSS bug which I made for Milestone.
 
 ## About DevSecOps cycle
 I use Jenkins for through out the process and all job is handled on it.
